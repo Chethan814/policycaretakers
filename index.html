@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Policycaretakers</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <img src="o9s1uvib.png" width="300px">
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Claim</a>
+                        <ul class="submenu">
+                            <li><a href="#">File a new claim</a></li>
+                            <li><a href="#">Track existing claim</a></li>
+                        </ul>
+                </li>
+                <li><a href="#">Support</a>
+                    <ul class="submenu">
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Get help</a></li>
+                        <li><a href="#">Manage communication preferences</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Hello,</h3>
+                <h1>I'm <span>Gagan Nagaraj</span></h1>
+                <p>Best Insurance solutions @ Lowest Premiums across the industry.
+                <p><b><span style="color: #2455f4;">Care + Compare + Convenient</span></b></p>
+                <P><img src="https://policycaretakers.com/wp-content/uploads/2023/03/final-l.png" width="40%" alt=""
+                        srcset=""></P>
+                </p>
+
+
+                <div class="social">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="f-1.png" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
