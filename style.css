@@ -57,12 +57,6 @@ ul {
     overflow: hidden;
 }
 
-/* sub menu wrap */
-.submenu {
-    display: flex;
-    flex-direction: column;
-    font-weight: 100;
-}
 
 li a {
     display: inline-block;
@@ -77,6 +71,12 @@ li a {
     transition: .3s;
 }
 
+/* sub menu wrap */
+.submenu {
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+}
 /* Drop down properties */
 .submenu li{
     font-weight: 900;
@@ -87,7 +87,7 @@ li a {
     box-shadow: -1px 2px 3px #1b1f27;
     opacity: 0;
     z-index: -999;
-    transition: all ease 0.5s;
+    transition: all ease 0.5ms;
     border-radius: 7px;
 }
 
