@@ -15,7 +15,6 @@
 body {
     font-family: 'Outfit', sans-serif;
     transition: background-color 0.3s, color 0.3s;
-
 }
 
 .container {
@@ -26,15 +25,11 @@ body {
     width: 100%;
 }
 
-.detail span{
-    color: #1F252E;
-}
-
 header {
-    position: relative;
-    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+    padding: 10px 0;
+    position: absolute;
     background: #fff;
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -42,7 +37,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 5px;
+
+}
+.logo img{
+    width: 300px;
 }
 
 .logo a {
@@ -57,10 +56,12 @@ ul {
     background-color: transparent;
     overflow: hidden;
 }
-   /* sub menu wrap */
-.submenu{
+
+/* sub menu wrap */
+.submenu {
     display: flex;
     flex-direction: column;
+    font-weight: 100;
 }
 
 li a {
@@ -74,27 +75,29 @@ li a {
     border-radius: 36px;
     line-height: 2;
     transition: .3s;
-} 
+}
 
-  /* Drop down properties */
-.page-header .submenu{
+/* Drop down properties */
+.submenu li{
+    font-weight: 900;
+}
+.page-header .submenu {
     position: absolute;
-    width: 10vm;
     background-color: #fff;
-    box-shadow: 0 20px 40px #2e3239;
+    box-shadow: -1px 2px 3px #1b1f27;
     opacity: 0;
     z-index: -999;
     transition: all ease 0.5s;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
-.page-header ul li:hover .submenu{
+.page-header ul li:hover .submenu {
     z-index: 99;
     opacity: 1;
     margin-top: 0;
 }
 
-.page-header ul .submenu li{
+.page-header ul .submenu li {
     margin: 0;
     width: 100%;
 }
@@ -105,6 +108,25 @@ li a:hover {
 
 #click {
     display: none;
+}
+
+/* box 1 */
+.main-row {
+    border-bottom: 8px solid #222;
+}
+
+.main-col-text {
+    max-width: 55rem;
+}
+
+.main-title {
+    font-weight: 600;
+}
+
+/* box 1 ends */
+
+.detail span {
+    color: #1F252E;
 }
 
 .menu {
@@ -213,12 +235,12 @@ li a:hover {
         color: #fff;
     }
 
-    .page-header .submenu{
+    .page-header .submenu {
         background-color: #244D61;
         box-shadow: 0 20px 40px #2e3239;
     }
 
-    .detail span{
+    .detail span {
         color: #2455f4;
     }
 
@@ -232,11 +254,25 @@ li a:hover {
     box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
     background: var(--primary-dark);
 }
+ /* the responsive code  */
 
 @media screen and (max-width: 1024px) {
     .container {
         padding: 0 4.4rem;
     }
+    
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        padding: 0 4.2rem;
+    }
+    li a{
+        font-size: 1.1rem;
+        font-size: 1.7vw;
+    }
+
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -249,6 +285,11 @@ li a:hover {
 
     header {
         height: auto;
+        position: relative;
+    }
+    .logo img{
+        width:200px;
+        padding: 10px;
     }
 
     ul {
@@ -259,14 +300,15 @@ li a:hover {
         display: flex;
         flex-direction: column;
         text-align: center;
+        box-shadow: 0 1px 4px #1F252E;
         top: 3.4rem;
         left: -100%;
-        z-index: 111111;
+        z-index: 1;
     }
 
     .menu {
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: bold;
         color: #244D61;
     }
